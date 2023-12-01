@@ -9,10 +9,10 @@ import Foundation
 import Combine
 
 @available(iOS 13.0, *)
-class PortfolioService {
+public class PortfolioService {
     
     @Published var porfolioData: [PortfolioEntity] = []
-    var portfolioSubscribtion : AnyCancellable?
+    public var portfolioSubscribtion : AnyCancellable?
     
     init() {
         getPortfolioData()
