@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct PortfolioEntity: Codable {
+public struct PortfolioEntity: Codable {
     
     public let id , headingTitile, icon, holdingCurency: String?
     public let netChangePercentage: Double?
