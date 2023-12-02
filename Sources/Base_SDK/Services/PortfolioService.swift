@@ -1,6 +1,6 @@
 //
-//  File.swift
-//  
+//  PortfolioService.swift
+//
 //
 //  Created by Lalana Chamika on 2023-11-30.
 //
@@ -14,7 +14,7 @@ public class PortfolioService {
     @Published var porfolioData: [PortfolioEntity] = []
     public var portfolioSubscribtion : AnyCancellable?
     
-    init() {
+    public init() {
         getPortfolioData()
     }
     
