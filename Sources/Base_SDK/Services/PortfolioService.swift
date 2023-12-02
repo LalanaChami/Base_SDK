@@ -11,8 +11,8 @@ import Combine
 @available(iOS 13.0, *)
 public class PortfolioService {
     
-    @Published var porfolioData: [PortfolioEntity] = []
-    public var portfolioSubscribtion : AnyCancellable?
+    @Published public var porfolioData: [PortfolioEntity] = []
+    var portfolioSubscribtion : AnyCancellable?
     
     public init() {
         getPortfolioData()
