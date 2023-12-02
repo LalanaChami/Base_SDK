@@ -7,7 +7,7 @@
 
 import Foundation
 
-class ServiceContainer {
+public class ServiceContainer {
     private static var factories: [String: () -> Any] = [:]
     private static var cache: [String: Any] = [:]
     
@@ -15,7 +15,7 @@ class ServiceContainer {
         factories[String(describing: type.self)] = factory
     }
     
-    public static func resolve<Service>(_ resolveType: ServiceType = .automatic, _ type: Service.Type) -> Service? {
+    static func resolve<Service>(_ resolveType: ServiceType = .automatic, _ type: Service.Type) -> Service? {
         let serviceName = String(describing: type.self)
 
         switch resolveType {
