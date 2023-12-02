@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum ServiceType {
+public enum ServiceType {
     case singleton
     case newSingleton
     case new

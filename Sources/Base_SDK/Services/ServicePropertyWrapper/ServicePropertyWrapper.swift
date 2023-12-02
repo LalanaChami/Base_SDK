@@ -8,11 +8,11 @@
 import Foundation
 
 @propertyWrapper
-struct Service<Service> {
+public struct Service<Service> {
 
     var service: Service
 
-    init(_ type: ServiceType = .automatic) {
+    public init(_ type: ServiceType = .automatic) {
         guard let service = ServiceContainer.resolve(type, Service.self) else {
             let serviceName = String(describing: Service.self)
             fatalError("No service of type \(serviceName) registered!")
@@ -21,7 +21,7 @@ struct Service<Service> {
         self.service = service
     }
 
-    var wrappedValue: Service {
+    public var wrappedValue: Service {
         get { self.service }
         mutating set { service = newValue }
     }
