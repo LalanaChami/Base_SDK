@@ -16,14 +16,23 @@ public struct PortfolioEntity: Identifiable, Codable {
     public let updatedDate: Date
 
     enum CodingKeys: String, CodingKey {
+//        case id
+//        case headingTitile = "title"
+//        case icon = "icon_url"
+//        case holdingAmount = "holding_amount"
+//        case netChangePercentage = "change_percentage"
+//        case netChangeAmount = "net_change_amount"
+//        case holdingCurency = "currency"
+//        case updatedDate = "updated_date"
+        
         case id
-        case headingTitile = "title"
-        case icon = "icon_url"
-        case holdingAmount = "holding_amount"
-        case netChangePercentage = "change_percentage"
-        case netChangeAmount = "net_change_amount"
-        case holdingCurency = "currency"
-        case updatedDate = "updated_date"
+        case headingTitile = "name"
+        case icon = "high_24h"
+        case holdingAmount = "current_price"
+        case netChangePercentage = "market_cap_change_percentage_24h"
+        case netChangeAmount = "atl_change_percentage"
+        case holdingCurency = "max_supply"
+        case updatedDate = "last_updated"
     }
     
     func getHoldingsData() -> PortfolioEntity {
