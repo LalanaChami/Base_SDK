@@ -20,7 +20,7 @@ class TradeNetworkManager {
     }
     
     @available(iOS 13.0, *)
-    private static func handleURLResponse(output: URLSession.DataTaskPublisher.Output) throws -> Data {
+    internal static func handleURLResponse(output: URLSession.DataTaskPublisher.Output) throws -> Data {
         guard let response = output.response as? HTTPURLResponse,
               response.statusCode >= 200 && response.statusCode < 300 else {
             throw URLError(.badServerResponse)

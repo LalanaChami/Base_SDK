@@ -1,0 +1,25 @@
+{
+  "configurations" : [
+    {
+      "id" : "6DC9FE52-523A-40D7-B509-7FD42061BE1A",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:",
+        "identifier" : "Base_SDKTests",
+        "name" : "Base_SDKTests"
+      }
+    }
+  ],
+  "version" : 1
+}
