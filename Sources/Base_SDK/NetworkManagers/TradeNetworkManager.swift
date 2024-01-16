@@ -8,6 +8,8 @@
 import Foundation
 import Combine
 
+
+@available(macOS 10.15, *)
 class TradeNetworkManager {
     
     @available(iOS 13.0, *)
